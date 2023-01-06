@@ -3,7 +3,7 @@
 
 def fizzbuzz():
     printtext = ""
-    for i in range(1,101):
+    for i in range(1, 101):
         printtext = ""
         if (i % 3 == 0):
             printtext += "Fizz"
@@ -12,4 +12,3 @@ def fizzbuzz():
         if (printtext == ""):
             printtext = "{}".format(i)
         print(printtext.format(), end=" ")
-
