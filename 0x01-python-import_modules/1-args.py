@@ -3,10 +3,15 @@
 
 def main():
     from sys import argv
+    myArg = argv[1:]
     argument = "arguments"
+    if (len(myArg) == 1):
+        argument = "argument"
     punc = "."
-    print("{0} {1}{2}".format(len(argv[1:]), argument, punc))
-    for k, v in enumerate(argv[1:], start=1):
+    if (len(myArg) == 1):
+        punc = ":"
+    print("{0} {1}{2}".format(len(myArg), argument, punc))
+    for k, v in enumerate(myArg, start=1):
         print("{0}: {1}".format(k, v))
 if (__name__ == '__main__'):
     main()
