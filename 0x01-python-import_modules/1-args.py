@@ -8,7 +8,7 @@ def main():
     if (len(myArg) == 1):
         argument = "argument"
     punc = "."
-    if (len(myArg) == 1):
+    if (len(myArg) > 0):
         punc = ":"
     print("{0} {1}{2}".format(len(myArg), argument, punc))
     for k, v in enumerate(myArg, start=1):
