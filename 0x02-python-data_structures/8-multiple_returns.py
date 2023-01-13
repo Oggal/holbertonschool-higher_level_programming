@@ -2,4 +2,8 @@
 
 
 def multiple_returns(sent):
-    return tuple((len(sent),sent[0]))
+    if (len(sent) > 0):
+        let = sent[0]
+    else:
+        let = None
+    return tuple((len(sent), let))
