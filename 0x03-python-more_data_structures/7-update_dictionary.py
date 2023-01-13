@@ -2,4 +2,4 @@
 
 
 def update_dictionary(richard, key, val):
-    richard[key] = val;
+    richard[key] = val
