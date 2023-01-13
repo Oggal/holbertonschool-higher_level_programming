@@ -8,7 +8,10 @@ def roman_to_int(string_in):
     if string_in is None:
         return 0
     for x in reversed(list(string_in)):
-        i = convert.get(x, 0)
+        try:
+            i = convert.get(x)
+        except KeyError:
+            return 0
         if last is None or i >= last:
             runningSum += i
         else:
