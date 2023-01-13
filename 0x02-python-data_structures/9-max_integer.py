@@ -2,7 +2,8 @@
 
 
 def max_integer(my_list=[]):
-    if len(my_list < 1):
+    if len(my_list) < 1:
         return None
-    list(my_list).sort()
+    my_list.sort()
     return my_list[-1]
+    
