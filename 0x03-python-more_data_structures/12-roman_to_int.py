@@ -7,7 +7,7 @@ def roman_to_int(string_in):
     last = None
     if string_in is None:
         return 0
-    for x in reversed(list(string_in)):
+    for x in reversed(list(string_in.upper())):
         try:
             i = convert.get(x)
         except KeyError:
