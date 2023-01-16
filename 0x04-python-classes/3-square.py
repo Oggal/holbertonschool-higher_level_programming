@@ -2,20 +2,11 @@
 """Simple Square Project
 
 This Module contains a class representing a simple Square.
-
-Example:
-    >>>square = __import__('1-square').Square
-    >>>new_square = square(2)
-
 """
 
 
 class Square:
-    """Class representing a simple square
-
-        Properties:
-
-    """
+    """Class representing a simple square"""
     @property
     def size(self):
         """int: Size of a Simple Square
