@@ -13,16 +13,25 @@ Example:
 class Square:
     """Class representing a simple square
     """
+    def size(self,value):
+        
+        if (not isinstance(value, int)):
+            raise TypeError("size must be an integer")
+        if value < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = value
+
+    def size(self):
+        """int: Size of a Simple Square
+        Value must be a positive integer."""
+        return self.__size
+
     def __init__(self, _size=0):
         """Initialize a simple Square
         Args:
             _size (int): Size of the Square.
         """
-        if (not isinstance(_size, int)):
-            raise TypeError("size must be an integer")
-        if _size < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = _size
+        self.size = _size
 
     def area(self) -> int:
         """Get Area of a Square
