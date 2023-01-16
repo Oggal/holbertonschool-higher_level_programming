@@ -12,17 +12,22 @@ Example:
 
 class Square:
     """Class representing a simple square
+
+        Properties:
+
     """
     @property
     def size(self):
         """int: Size of a Simple Square
-        Value must be a positive integer."""
+        Value must be a positive integer.
+        """
         return self.__size
 
     @property.setter
     def size(self, value):
         """int: Size of Simple Square
-        Value must be an int >=0 """
+        Value must be an int >=0 
+        """
         if (not isinstance(value, int)):
             raise TypeError("size must be an integer")
         if value < 0:
