@@ -14,18 +14,18 @@ class Square:
     """Class representing a simple square
     """
     @property
+    def size(self):
+        """int: Size of a Simple Square
+        Value must be a positive integer."""
+        return self.__size
+
+    @property.setter
     def size(self, value):
-        
         if (not isinstance(value, int)):
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-    @property.setter
-    def size(self):
-        """int: Size of a Simple Square
-        Value must be a positive integer."""
-        return self.__size
 
     def __init__(self, _size=0):
         """Initialize a simple Square
