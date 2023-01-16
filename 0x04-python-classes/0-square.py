@@ -4,7 +4,6 @@
 This Module contains a class representing a simple Square.
 
 Example:
-    >>>square = __import__('0-square.py').Square
     >>>new_square = square(2)
 
 """
