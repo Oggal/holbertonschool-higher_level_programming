@@ -18,7 +18,7 @@ class Square:
         Args:
             _size (int): Size of the Square.
         """
-        if (_size is not int):
+        if (isinstance(_size,int)):
             raise TypeError("size must be an integer")
         if _size < 0:
             raise ValueError("size must be >= 0")
