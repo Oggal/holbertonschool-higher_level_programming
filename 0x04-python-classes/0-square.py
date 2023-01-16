@@ -2,6 +2,6 @@
 
 
 class Square:
-"""Class representing a simple square"""
+    """Class representing a simple square"""
     def __init__(self, _size):
         self.__size = _size
