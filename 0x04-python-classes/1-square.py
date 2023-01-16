@@ -13,11 +13,13 @@ Example:
 class Square:
     """Class representing a simple square
     """
-    def __init__(self, _size:int=0):
+    def __init__(self, _size=0):
         """Initialize a simple Square
         Args:
             _size (int): Size of the Square.
         """
+        if (_size is not int):
+            raise TypeError("size must be an integer")
         if _size < 0:
             raise ValueError("size must be >= 0")
         self.__size = _size
