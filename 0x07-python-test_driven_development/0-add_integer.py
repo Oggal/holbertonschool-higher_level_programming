@@ -3,6 +3,7 @@
 
 
 def add_integer(a: int, b: int=98)->int:
+    """Adds two ints together"""
     a = a if isinstance(a, int) else int(a) if isinstance(a, float) else None
     b = b if isinstance(b, int) else int(b) if isinstance(b, float) else None
     if a is None:
