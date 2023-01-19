@@ -32,6 +32,16 @@ First, retireve the function.
         ...
     TypeError: a must be an integer
 
+    >>> add_integer([0])
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+    
+    >>> add_integer("0")
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
     >>> add_integer(0, "dog")
     Traceback (most recent call last):
         ...
@@ -41,3 +51,5 @@ First, retireve the function.
     Traceback (most recent call last):
         ...
     TypeError: b must be an integer
+
+
