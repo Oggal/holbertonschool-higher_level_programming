@@ -24,3 +24,23 @@
     Traceback (most recent call last):
         ...
     ZeroDivisionError: division by zero
+
+    >>> matrix_divided(matrixF, 1)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix_divided(matrix2_floats, 'A')
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+    
+    >>> matrix_divided(matrix2, 0.00)
+    Traceback (most recent call last):
+        ...
+    ZeroDivisionError: division by zero
+
+    >>> matrix_divided(matrixF, 1.0)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
