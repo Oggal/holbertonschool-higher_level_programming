@@ -1,0 +1,26 @@
+
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+
+    Testing Objects:
+
+    >>> matrix2 = [[2,4],[6,8]]
+    >>> matrix2_floats = [[2.2, 4.4], [6.6, 8.8]]
+    >>> matrixF = [[1, 2, 3], ['a', 'b', 'c']]
+
+    Begin Testing:
+
+    >>> matrix_divided(matrix2, 2)
+    [[1.0, 2.0], [3.0, 4.0]]
+
+    >>> matrix_divided(matrix2_floats, 2)
+    [[1.1, 2.2], [3.3, 4.4]]
+
+    >>> matrix_divided(matrix2_floats, 1)
+    [[2.2, 4.4], [6.6, 8.8]]
+    
+    >>> matrix_divided(matrix2, 0)
+    Traceback (most recent call last):
+        ...
+    ZeroDivisionError: division by zero
