@@ -42,5 +42,7 @@ class Rectangle:
 
     def __str__(self):
         myStr = ""
+        if (self.width == 0 or self.height == 0):
+            return myStr
         myStr = (('#' * self.width)+'\n')*(self.height-1) + ('#' * self.width)
         return myStr
