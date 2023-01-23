@@ -1,0 +1,46 @@
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+    >>> TestBasic = "this is a dog"
+    >>> TestPeriod = "this. is. a dog."
+    >>> TestComma = "this, is, a, dog,"
+    >>> TestQuestion = "this? is? a? dog?"
+    >>> TestColon = "this: is: a: dog:"
+    >>> TestMixed = "this? is: a. dog"
+    >>> Test1Period = "this is. a dog"
+    >>> Test1Comma = "this is, a dog"
+    >>> Test1Question = "this is? a dog"
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+    >>> text_indentation(TestBasic)
+    this is a dog
+
+    >>> text_indentation(TestComma)
+    this, is, a, dog,
+
+    >>> text_indentation(Test1Period)
+    this is.
+    <BLANKLINE>
+    a dog
+
+    >>> text_indentation(Test1Question)
+    this is?
+    <BLANKLINE>
+    a dog
+
+    >>> text_indentation(Test1Comma)
+    this is, a dog
+
+    >>> text_indentation(TestQuestion)
+    this?
+    <BLANKLINE>
+    is?
+    <BLANKLINE>
+    a?
+    <BLANKLINE>
+    dog?
+    <BLANKLINE>
