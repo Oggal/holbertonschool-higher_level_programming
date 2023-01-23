@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+"""Add empty lines after punctuation"""
 
 
 def text_indentation(text):
+    '''Adds empty lines after . : or ?'''
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     delims = ".?:"
