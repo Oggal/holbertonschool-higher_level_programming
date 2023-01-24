@@ -25,6 +25,11 @@
     Traceback (most recent call last):
     ...
     TypeError: text must be a string
+
+    >>> text_indentation(["Nested"])
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
     
     >>> text_indentation(TestBasic)
     this is a dog
@@ -36,6 +41,8 @@
     this is.
     <BLANKLINE>
     a dog
+
+    >>> text_indentation("")
 
     >>> text_indentation(Test1Question)
     this is?

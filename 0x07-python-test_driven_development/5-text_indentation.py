@@ -6,6 +6,8 @@ def text_indentation(text):
     '''Adds empty lines after . : or ?'''
     if not isinstance(text, str):
         raise TypeError("text must be a string")
+    if text=="":
+        return
     delims = ".?:"
     for x in set(delims):
         x_string = x+"\n\n"
