@@ -58,3 +58,8 @@
     Traceback (most recent call last):
     ...
     TypeError: div must be a number
+
+    >>> matrix_divided(matrix2_floats, None)
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
