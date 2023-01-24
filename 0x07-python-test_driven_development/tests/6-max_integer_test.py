@@ -7,7 +7,6 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer([0, 5]), 5)
         self.assertEqual(max_integer([0, 5, 9]), 9)
         self.assertEqual(max_integer([1.5, 5.5]), 5.5)
-        self.assertEqual(max_integer(["dogz"]), 'z')
-        
-        with self.assertRaises(TypeError):
-            max_integer("string?")
+        self.assertEqual(max_integer("dogz"), 'z')
+        self.assertEqual(max_integer([]), None)
+        self.assertEqual(max_integer(None), None)
