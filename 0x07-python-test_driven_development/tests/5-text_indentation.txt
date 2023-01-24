@@ -61,3 +61,12 @@
     <BLANKLINE>
     dog?
     <BLANKLINE>
+
+    >>> text_indentation(TestMixed)
+    this?
+    <BLANKLINE>
+    is:
+    <BLANKLINE>
+    a.
+    <BLANKLINE>
+    dog
