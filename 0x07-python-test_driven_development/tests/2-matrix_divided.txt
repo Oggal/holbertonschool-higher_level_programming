@@ -21,6 +21,9 @@
     >>> matrix_divided(matrix2_floats, 1)
     [[2.2, 4.4], [6.6, 8.8]]
     
+    >>> matrix_divided(matrix2_floats, 1.0)
+    [[2.2, 4.4], [6.6, 8.8]]
+
     >>> matrix_divided(matrix2, 0)
     Traceback (most recent call last):
         ...
@@ -65,12 +68,17 @@
     TypeError: div must be a number
 
     >>> matrix_divided("this is a string", 5)
-        Traceback (most recent call last):
+    Traceback (most recent call last):
     ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
     
     >>> matrix_divided((1, 2, 3), 5)
-        Traceback (most recent call last):
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >> matrix_divided(None, 5)
+    Traceback (most recent call last):
     ...
     TypeError: matrix must be a matrix (list of lists) of integers/floats
