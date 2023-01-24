@@ -15,8 +15,6 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError('division by zero')
     last = None
     newMatrix = []
-    if matrix is None:
-        bail()
     for row in matrix:
         if last is not None and last != len(row):
             raise TypeError("Each row of the matrix must have the same size")
