@@ -74,3 +74,6 @@
 
     >> matrix_divided(None, 5)
     []
+
+    >>> matrix_divided([[2]],3)
+    [[0.67]]
