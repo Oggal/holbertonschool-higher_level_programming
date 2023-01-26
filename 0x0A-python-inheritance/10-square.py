@@ -4,6 +4,7 @@ Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """ The Square Squared Square Squares"""
+    """ The Square Squared Square Squares, aslo private member size is redundent"""
     def __init__(self, size):
         super().__init__(size, size)
+        self.__size = size
