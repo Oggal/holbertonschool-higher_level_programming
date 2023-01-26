@@ -8,4 +8,3 @@ def lookup(obj):
     startlist.extend(x for x in dir(obj) if x not in startlist)
     startlist.sort()
     return startlist
-    
