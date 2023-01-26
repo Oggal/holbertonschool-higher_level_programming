@@ -7,4 +7,5 @@ class Square(Rectangle):
     """ The Square Squared Squares, aslo private member size is redundent"""
     def __init__(self, size):
         super().__init__(size, size)
+        self.integer_validator("size", size)
         self.__size = size
