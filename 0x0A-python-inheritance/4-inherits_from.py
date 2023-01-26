@@ -4,4 +4,4 @@
 
 def inherits_from(obj, a_class):
     """Good code documents itself"""
-    return issubclass(obj, a_class)
+    return issubclass(type(obj), a_class)
