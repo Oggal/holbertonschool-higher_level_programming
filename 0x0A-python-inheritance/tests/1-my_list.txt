@@ -17,4 +17,10 @@
     >>> print(my_list)
     [1, 4, 2, 3, 5]
     
-    
+    >>> my_list = MyList([5, 5, 7, 1, -2, 0])
+
+    >>> print(my_list)
+    [5, 5, 7, 1, -2, 0]
+
+    >>> my_list.print_sorted()
+    [-2, 0, 1, 5, 5, 7]
