@@ -2,6 +2,6 @@
 """Module to list object atributes"""
 
 
-def loopup(obj):
+def lookup(obj):
     '''List the object attributes'''
-    return [k for k,v in obj.__dict__]
+    return list(obj.__dict__.keys())
