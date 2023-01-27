@@ -2,8 +2,8 @@
 '''Beam me the file scotty!'''
 
 
-def write_file(filename="", text=""):
+def append_write(filename="", text=""):
     """Open up the file, loop the lines, and print as we loop"""
-    with open(filename, 'w', encoding="utf-8") as f:
+    with open(filename, 'a', encoding="utf-8") as f:
         i = f.write(text)
     return i
