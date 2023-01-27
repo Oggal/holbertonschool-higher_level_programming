@@ -5,5 +5,6 @@ import json
 
 def save_to_json(my_obj, filename):
     """From python, to Json, to disk"""
-    json.dump(my_obj,filename)
+    with open(filename, 'w') as jFile:
+        json.dump(my_obj,jFile)
    
