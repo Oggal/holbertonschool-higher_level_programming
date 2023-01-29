@@ -11,7 +11,7 @@ class Base():
             Base.__nb_objects += 1
         self.id = Base.__nb_objects if id is None else id
 
-    def check_int(cls, value):
+    def check_int(value):
         """check if an int value is valid, raise error if not """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
