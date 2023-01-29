@@ -54,9 +54,8 @@ class Rectangle(Base):
         """Draw a rectangle"""
         print("\n" * self.y, end="")
         for y_index in range(self.height):
-            for x_index in range(self.width):
-                print("{}#".format(" " * self.x), end="")
-            print()
+                print("{}{}".format(" " * self.x, "#" * self.width))
+            
 
     def __str__(self):
         parts = [type(self).__name__, self.id, self.x,
