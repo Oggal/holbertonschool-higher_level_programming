@@ -36,7 +36,7 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    def height(self, value):
+    def y(self, value):
         self.__y = Base.check_int(value)
 
     def __init__(self, width, height, x=0, y=0, id=None):
