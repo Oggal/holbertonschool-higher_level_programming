@@ -45,3 +45,7 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
+
+    def area(self):
+        """Calculate Area of rect"""
+        return self.width * self.height

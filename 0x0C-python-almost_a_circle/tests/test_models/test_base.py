@@ -10,3 +10,6 @@ class TestFib(unittest.TestCase):
         self.obj = Base()
         self.assertEqual(self.obj.id,1)
         
+    def test_validator(self):
+        self.assertRaises(TypeError, Base.check_int, "fail", "fail")
+        self.assertRaises(TypeError, Base.check_int, 2.5, "failure")
