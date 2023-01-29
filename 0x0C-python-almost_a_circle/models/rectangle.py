@@ -52,9 +52,10 @@ class Rectangle(Base):
 
     def display(self):
         """Draw a rectangle"""
+        print("\n" * self.y, end=())
         for y_index in range(self.height):
             for x_index in range(self.width):
-                print("#", end="")
+                print("{}#".format(" " * self.x), end="")
             print()
 
     def __str__(self):
