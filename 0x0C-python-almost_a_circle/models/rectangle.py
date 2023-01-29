@@ -21,7 +21,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        self.__height = Base.check_int(value)
+        self.__height = value
 
     @property
     def x(self):
@@ -29,7 +29,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        self.__x = Base.check_int(value)
+        self.__x = value
 
     @property
     def y(self):
@@ -37,7 +37,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        self.__y = Base.check_int(value)
+        self.__y = value
 
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
