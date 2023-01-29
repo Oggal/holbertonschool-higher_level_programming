@@ -55,7 +55,6 @@ class Rectangle(Base):
         print("\n" * self.y, end="")
         for y_index in range(self.height):
                 print("{}{}".format(" " * self.x, "#" * self.width))
-            
 
     def __str__(self):
         parts = [type(self).__name__, self.id, self.x,
