@@ -52,9 +52,7 @@ class Rectangle(Base):
 
     def display(self):
         """Draw a rectangle"""
-        #placeholder for Y offset
         for y_index in range(self.height):
             for x_index in range(self.width):
-                #placeholder for x offset
                 print("#", end="")
             print()
