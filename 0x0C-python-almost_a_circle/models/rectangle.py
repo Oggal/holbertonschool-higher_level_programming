@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """Rectangle Class"""
 
-Base = __import__("base").Base
-
+from base import Base
 
 
 class Rectangle(Base):
@@ -46,4 +45,3 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-
