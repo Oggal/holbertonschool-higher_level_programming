@@ -11,3 +11,7 @@ class TestFib(unittest.TestCase):
         self.assertEqual(self.obj.height,1)
         self.assertEqual(self.obj.width,1)
         self.assertEqual(self.obj.id, 2)
+
+    def test_strings(self):
+        self.obj = Rectangle(1,2,3,4,3)
+        self.assertEqual(str(self.obj), "[Rectangle] (3) 3/4 - 1/2")

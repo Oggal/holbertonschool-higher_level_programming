@@ -56,3 +56,9 @@ class Rectangle(Base):
             for x_index in range(self.width):
                 print("#", end="")
             print()
+
+    def __str__(self):
+        parts = [type(self).__name__, self.id, self.x,
+                 self.y, self.width, self.height]
+        res = "[{0}] ({1}) {2}/{3} - {4}/{5}".format(*parts)
+        return res
