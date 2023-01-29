@@ -13,7 +13,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        self.__width = Base.check_int(value)
+        self.__width = Base.check_int(value, "width")
 
     @property
     def height(self):
@@ -21,7 +21,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        self.__height = Base.check_int(value)
+        self.__height = Base.check_int(value, "height")
 
     @property
     def x(self):
@@ -29,7 +29,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        self.__x = Base.check_int(value)
+        self.__x = Base.check_int(value, "x", 0)
 
     @property
     def y(self):
@@ -37,7 +37,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        self.__y = Base.check_int(value)
+        self.__y = Base.check_int(value, "y", 0)
 
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
