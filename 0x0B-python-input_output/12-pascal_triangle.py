@@ -19,4 +19,3 @@ def pascal_triangle(n):
         tris.append(cur_layer)
         prev = tris[j]
     return tris
-
