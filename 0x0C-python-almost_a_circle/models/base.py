@@ -49,3 +49,14 @@ class Base():
         my_obj = cls()
         my_obj.update(**dictionary)
         return my_obj
+
+    @classmethod
+    def load_from_file(cls):
+        filename = "{}.json".format(cls.__name__)
+        with open(filename, "r") as f:
+            data = f.read()
+        diction = Base.from_json_string(data)
+        out_list = []
+        for o in diction:
+            out_list.append(cls.create(**o))
+        return out_list
