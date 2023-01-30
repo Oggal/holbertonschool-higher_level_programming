@@ -3,6 +3,7 @@
 
 
 def pascal_triangle(n):
+    """ Create a pascal triangle"""
     tris = []
     prev = None
     for i in range(n):
@@ -19,7 +20,3 @@ def pascal_triangle(n):
         prev = tris[j]
     return tris
 
-if __name__ == "__main__":
-    import sys
-    if len(sys.argv) == 2:
-        print(pascal_triangle(int(sys.argv[1])))
