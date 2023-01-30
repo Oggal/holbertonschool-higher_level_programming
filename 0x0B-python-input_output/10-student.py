@@ -9,6 +9,9 @@ class Student():
         self.last_name = last_name
         self.age = age
 
-    def to_json(self):
+    def to_json(self, attrs=None):
         """Get json rep"""
-        return self.__dict__
+        if attrs is None:
+            return self.__dict__
+        else:
+            return {k for k,v in self.__dict__.items() if k in attrs}
