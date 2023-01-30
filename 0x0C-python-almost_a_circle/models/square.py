@@ -28,7 +28,6 @@ class Square(Rectangle):
             self.y = args[3] or self.y
         except IndexError:
             return
-        
 
     @property
     def size(self):
