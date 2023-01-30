@@ -47,6 +47,5 @@ class Base():
     def create(cls, **dictionary):
         """Create objects from dictionarys"""
         my_obj = cls()
-        print(my_obj)
         my_obj.update(**dictionary)
         return my_obj
