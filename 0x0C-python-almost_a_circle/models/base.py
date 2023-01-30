@@ -24,6 +24,16 @@ class Base():
                 raise ValueError("{} must be >= {}".format(val_name, min))
         return value
 
-    def to_json_string(list_dictionaries=None):
+    def to_json_string(list_dictionaries=[]):
         """get JSON strings"""
-        return json.dumps(list_dictionaries or [])
+        list_dictionaries = list_dictionaries or []
+        return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        filename = str(cls.__name__) + ".json"
+
+        with open(filename, "w") as file:
+            file.write(
+                    Base.to_json_string(
+                        [obj.to_dictionary() for obj in list_objs]))
