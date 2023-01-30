@@ -66,8 +66,11 @@ class Rectangle(Base):
         """Quick Update"""
         if (args is None) or args == []:
             return
-        self.id = args[0] or self.id
-        self.width = args[1] or self.width
-        self.height = args[2] or self.height
-        self.x = args[3] or self.x
-        self.y = args[4] or self.y
+        try:
+            self.id = args[0] or self.id
+            self.width = args[1] or self.width
+            self.height = args[2] or self.height
+            self.x = args[3] or self.x
+            self.y = args[4] or self.y
+        except IndexError:
+            return
