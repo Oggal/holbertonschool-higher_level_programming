@@ -64,7 +64,7 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """Quick Update"""
-        if (args is None or args == () )and kwargs is not None:
+        if (args is None or args == ()) and kwargs is not None:
             args = [kwargs.get("id"), kwargs.get("width"),
                     kwargs.get("height"), kwargs.get("x"),
                     kwargs.get("y")]
