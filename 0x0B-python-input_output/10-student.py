@@ -14,4 +14,4 @@ class Student():
         if attrs is None:
             return self.__dict__
         else:
-            return {k for k,v in self.__dict__.items() if k in attrs}
+            return {k:v for k,v in self.__dict__.items() if k in attrs}
