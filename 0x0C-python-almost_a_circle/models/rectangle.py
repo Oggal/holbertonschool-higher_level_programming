@@ -78,5 +78,6 @@ class Rectangle(Base):
             return
 
     def to_dictionarty(self):
+        """Turn this rect into a dict"""
         return {"id":self.id, "width":self.width, "height":self.height,
                  "x":self.x, "y":self.y}
