@@ -24,7 +24,8 @@ class Base():
                 raise ValueError("{} must be >= {}".format(val_name, min))
         return value
 
-    def to_json_string(list_dictionaries=None):
+    def to_json_string(list_dictionaries):
         """get JSON strings"""
-        list_dictionaries = list_dictionaries or []
+        if list_dictionaries is None or list_dictionaries == []:
+            return "[]"
         return json.dumps(list_dictionaries)
