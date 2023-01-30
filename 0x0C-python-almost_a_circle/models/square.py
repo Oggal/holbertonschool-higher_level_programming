@@ -17,20 +17,18 @@ class Square(Rectangle):
         return res
 
     def update(self, *args, **kwargs):
-        """Update the Square"""
-        if args == () and kwargs is not None:
-            nargs = [kwargs.get("id"), kwargs.get("size"), kwargs.get("size"),
-                     kwargs.get("x"), kwargs.get("y")]
-        nargs = []
+        """Quick Update"""
+        if (args is None or args == ()) and kwargs is not None:
+            args = [kwargs.get("id"), kwargs.get("size"), kwargs.get("x"),
+                    kwargs.get("y")]
         try:
-            nargs[0] = args[0]
-            nargs[1] = args[1]
-            nargs[2] = args[1]
-            nargs[3] = args[2]
-            nargs[4] = args[3]
+            self.id = args[0] or self.id
+            self.size = args[1] or self.size
+            self.x = args[2] or self.x
+            self.y = args[3] or self.y
         except IndexError:
-            pass
-        super().update(*nargs)
+            return
+        
 
     @property
     def size(self):
