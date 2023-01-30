@@ -39,7 +39,7 @@ class Rectangle(Base):
     def y(self, value):
         self.__y = Base.check_int(value, "y", 0)
 
-    def __init__(self, width, height, x=0, y=0, id=None):
+    def __init__(self, width=1, height=1, x=0, y=0, id=None):
         super().__init__(id)
         self.width = width
         self.height = height

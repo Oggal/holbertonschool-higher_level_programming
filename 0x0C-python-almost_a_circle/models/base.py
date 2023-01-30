@@ -42,3 +42,11 @@ class Base():
     def from_json_string(json_string):
         """Turn json to objects"""
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Create objects from dictionarys"""
+        my_obj = cls()
+        print(my_obj)
+        my_obj.update(**dictionary)
+        return my_obj
