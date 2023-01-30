@@ -37,3 +37,8 @@ class Square(Rectangle):
     def size(self, value):
         self.width = value
         self.height = value
+
+    def to_dictionary(self):
+        """Turn this rect into a dict"""
+        return {"id": self.id, "size": self.size,
+                "x": self.x, "y": self.y}
