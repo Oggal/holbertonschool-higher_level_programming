@@ -17,6 +17,7 @@ class Square(Rectangle):
         return res
 
     def update(self, *args, **kwargs):
+        """Update the Square"""
         if args == () and kwargs is not None:
             nargs = [kwargs.get("id"), kwargs.get("size"), kwargs.get("size"),
                      kwargs.get("x"), kwargs.get("y")]
