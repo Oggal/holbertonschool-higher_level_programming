@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ Base Class"""
+import json
 
 
 class Base():
@@ -22,3 +23,8 @@ class Base():
             if value < min:
                 raise ValueError("{} must be >= {}".format(val_name, min))
         return value
+
+    def to_json_string(list_dictionaries=None):
+        """get JSON strings"""
+        list_dictionaries = list_dictionaries or []
+        return json.dumps(list_dictionaries)
