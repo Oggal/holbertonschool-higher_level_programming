@@ -61,3 +61,13 @@ class Rectangle(Base):
                  self.y, self.width, self.height]
         res = "[{0}] ({1}) {2}/{3} - {4}/{5}".format(*parts)
         return res
+
+    def update(self, *args):
+        """Quick Update"""
+        if (args is None) or args == []:
+            return
+        self.id = args[0] or self.id
+        self.width = args[1] or self.width
+        self.height = args[2] or self.height
+        self.x = args[3] or self.x
+        self.y = args[4] or self.y
