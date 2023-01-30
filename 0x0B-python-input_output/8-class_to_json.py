@@ -4,4 +4,5 @@ import json
 
 
 def class_to_json(obj):
+    """Get dictionary representation"""
     return obj.__dict__
