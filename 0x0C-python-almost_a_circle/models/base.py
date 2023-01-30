@@ -40,4 +40,5 @@ class Base():
                         [obj.to_dictionary() for obj in list_objs]))
 
     def from_json_string(json_string):
+        """Turn json to objects"""
         return json.loads(json_string)
