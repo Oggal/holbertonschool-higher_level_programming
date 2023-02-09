@@ -1,2 +1,2 @@
 -- Document EVERYTHING
-SELECT AVG(SCORE) FROM second_table;
+SELECT average = AVG(SCORE) FROM second_table;
