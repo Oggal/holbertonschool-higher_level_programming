@@ -11,11 +11,13 @@ def get_all_states():
     mysql_username = sys.argv[1]
     mysql_password = sys.argv[2]
     database_name = sys.argv[3]
-    print("{} : {} @ {}".format(mysql_username,mysql_password,database_name))
     try:
-        db = MySQLdb.connect("localhost",mysql_username,mysql_password,database_name)
+        db = MySQLdb.connect(
+            "localhost",
+            mysql_username,
+            mysql_password,
+            database_name)
     except:
-        print("Failed")
         return (0)
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
