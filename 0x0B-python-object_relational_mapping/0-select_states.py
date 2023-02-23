@@ -1,10 +1,11 @@
 #!/usr/bin/python3
+'''Get All States, requires User, Password, Database'''
 import MySQLdb
 import sys
-'''Get All States, requires User, Password, Database'''
 
 
 def get_all_states():
+    '''Get States from sql table'''
     if(len(sys.argv) < 4):
         print(sys.argv)
         return
@@ -17,7 +18,7 @@ def get_all_states():
             mysql_username,
             mysql_password,
             database_name)
-    except:
+    except Exception as e:
         return (0)
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
@@ -26,6 +27,7 @@ def get_all_states():
         print(r)
     cursor.close()
     db.close()
+
 
 if __name__ == '__main__':
     get_all_states()
