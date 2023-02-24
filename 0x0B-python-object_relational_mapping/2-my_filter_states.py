@@ -25,7 +25,7 @@ def my_filter_states():
     cursor = db.cursor()
     cursor.execute(
         "SELECT * FROM states \
-        WHERE name LIKE '{}' ORDER BY id ASC;".format(target))
+        WHERE name LIKE '{}' ORDER BY id ASC;".format(sys.argv[4]))
     rows = cursor.fetchall()
     for r in rows:
         print(r)
