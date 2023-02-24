@@ -20,12 +20,12 @@ def my_filter_states():
     except Exception as e:
         return (0)
     target = sys.argv[4]
-    # target = target.split('"')[0]
-    # target = target.split("'")[0]
+    target = target.split('"')[0]
+    target = target.split("'")[0]
     cursor = db.cursor()
     cursor.execute(
         "SELECT * FROM states \
-        WHERE name = '{}' ORDER BY id ASC;".format(target))
+        WHERE name LIKE '{}' ORDER BY id ASC;".format(target))
     rows = cursor.fetchall()
     for r in rows:
         print(r)
