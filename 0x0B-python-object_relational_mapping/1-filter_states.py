@@ -21,7 +21,9 @@ def get_all_states():
     except Exception as e:
         return (0)
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC;")
+    cursor.execute(
+        "SELECT * FROM states \
+        WHERE ASCII(left(name,1)) = ASCII('N') ORDER BY id ASC;")
     rows = cursor.fetchall()
     for r in rows:
         print(r)
