@@ -4,7 +4,7 @@ import MySQLdb
 import sys
 
 
-def filter_states():
+def my_filter_states():
     '''Get States from sql table'''
     if(len(sys.argv) < 4):
         print(sys.argv)
@@ -20,10 +20,13 @@ def filter_states():
             database_name)
     except Exception as e:
         return (0)
+    target = sys.argv[4]
+    target = target.split('"')[0]
+    target = target.split("'")[0]
     cursor = db.cursor()
     cursor.execute(
         "SELECT * FROM states \
-        WHERE ASCII(left(name,1)) = ASCII('N') ORDER BY id ASC;")
+        WHERE name = '{}' ORDER BY id ASC;".format(target))
     rows = cursor.fetchall()
     for r in rows:
         print(r)
@@ -32,4 +35,4 @@ def filter_states():
 
 
 if __name__ == '__main__':
-    filter_states()
+    my_filter_states()
