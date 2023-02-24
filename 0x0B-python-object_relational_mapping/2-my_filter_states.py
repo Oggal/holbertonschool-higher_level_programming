@@ -6,8 +6,7 @@ import sys
 
 def my_filter_states():
     '''Get States from sql table'''
-    if(len(sys.argv) < 4):
-        print(sys.argv)
+    if(len(sys.argv) < 5):
         return
     mysql_username = sys.argv[1]
     mysql_password = sys.argv[2]
