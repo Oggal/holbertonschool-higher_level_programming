@@ -4,9 +4,10 @@ import MySQLdb
 import sys
 
 
-def my_filter_states():
-    '''Get States from sql table'''
-    if(len(sys.argv) < 5):
+def filter_states():
+    '''Get Cites and States from sql table'''
+    if(len(sys.argv) < 4):
+        print(sys.argv)
         return
     mysql_username = sys.argv[1]
     mysql_password = sys.argv[2]
@@ -18,14 +19,13 @@ def my_filter_states():
             mysql_password,
             database_name)
     except Exception as e:
+        print("oh no,\n Oh NO\n OH NO NO NO NOOO NO NO")
         return (0)
-    target = sys.argv[4]
-    target = target.split('"')[0]
-    target = target.split("'")[0]
     cursor = db.cursor()
     cursor.execute(
-        "SELECT * FROM states \
-        WHERE name LIKE '{}' ORDER BY id ASC;".format(target))
+        "SELECT cities.id, cities.name, states.name FROM cities \
+        LEFT JOIN states ON cities.state_id = states.id\
+        ORDER BY cities.id ASC;")
     rows = cursor.fetchall()
     for r in rows:
         print(r)
@@ -34,4 +34,4 @@ def my_filter_states():
 
 
 if __name__ == '__main__':
-    my_filter_states()
+    filter_states()
