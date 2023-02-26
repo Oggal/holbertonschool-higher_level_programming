@@ -19,9 +19,6 @@ def my_filter_states():
             database_name)
     except Exception as e:
         return (0)
-    target = sys.argv[4]
-    target = target.split('"')[0]
-    target = target.split("'")[0]
     cursor = db.cursor()
     cursor.execute(
         "SELECT * FROM states \
