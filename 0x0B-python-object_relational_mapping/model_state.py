@@ -1,7 +1,8 @@
 #!/usr/bin/python3
+"""State Class File"""
 from sqlalchemy import Column, String, Integer
 from sqlalchemy.ext.declarative import declarative_base
-"""State Class File"""
+
 
 Base = declarative_base()
 
