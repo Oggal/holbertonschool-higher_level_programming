@@ -16,11 +16,9 @@ def fetch_all_states():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).order_by(State.id).first()
-    if (state is not None):
+    for state in session.query(State).filter(
+     State.name.contains('a')).order_by(State.id).all():
         print("{}: {}".format(state.id, state.name))
-        return
-    print("Nothing")
 
 
 if __name__ == "__main__":
