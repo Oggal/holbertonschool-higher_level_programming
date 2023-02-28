@@ -21,7 +21,7 @@ def fetch_all_states():
     session = Session()
 
     state = session.query(State).filter(
-        State.name == (target)).order_by(State.id).first()
+        State.name == (target)).first()
     if(state is None):
         print("Not Found")
         return
