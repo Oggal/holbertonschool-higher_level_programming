@@ -13,10 +13,6 @@ def insert_into_states():
         sys.argv[1], sys.argv[2], sys.argv[3]))
     Base.metadata.create_all(engine)
 
-    target = sys.argv[4]
-    target = target.split('"')[0]
-    target = target.split("'")[0]
-
     Session = sessionmaker(bind=engine)
     session = Session()
 
