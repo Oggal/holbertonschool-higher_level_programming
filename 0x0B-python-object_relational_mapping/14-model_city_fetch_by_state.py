@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-"""Fetch All States"""
+"""Fetch By States"""
 import sys
 from model_state import Base, State
-
+from model_city import City
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
 
-def delete_a_states():
+def fetch_by_state():
     '''Fetch All States'''
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
         sys.argv[1], sys.argv[2], sys.argv[3]))
@@ -16,11 +16,10 @@ def delete_a_states():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for state in session.query(State).filter(
-     State.name.contains('a')).order_by(State.id).all():
-        session.delete(state)
-    session.commit()
+    for cit in session.query(City).order_by(City.id).all():
+        
+            print("{}: ({}) {}".format(cit.state.name,cit.id,cit.name))
 
 
 if __name__ == "__main__":
-    delete_a_states()
+    fetch_by_state()
