@@ -17,8 +17,7 @@ def fetch_by_state():
     session = Session()
 
     for cit in session.query(City).order_by(City.id).all():
-        
-            print("{}: ({}) {}".format(cit.state.name,cit.id,cit.name))
+        print("{}: ({}) {}".format(cit.state.name, cit.id, cit.name))
 
 
 if __name__ == "__main__":
