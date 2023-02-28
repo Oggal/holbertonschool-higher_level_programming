@@ -17,8 +17,10 @@ def fetch_all_states():
     session = Session()
 
     state = session.query(State).order_by(State.id).first()
-    print("{}: {}".format(state.id, state.name))
-
+    if (state is not None):
+        print("{}: {}".format(state.id, state.name))
+        return
+    print("Nothing")
 
 if __name__ == "__main__":
     fetch_all_states()
