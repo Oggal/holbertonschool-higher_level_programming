@@ -23,7 +23,7 @@ def fetch_all_states():
     state = session.query(State).filter(
         State.name == (target)).first()
     if(state is None):
-        print("Not Found")
+        print("Not found")
         return
     print("{}".format(state.id))
 
