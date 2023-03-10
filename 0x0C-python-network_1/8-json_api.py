@@ -14,7 +14,7 @@ def JsonPost():
     data = {'q': q}
     req = requests.post(url, data)
     try:
-        print(req.json())
+        print("[{}] {}".format(req.json().get('id'), req.json().get('name')))
     except Exception as e:
         print("Not a valid JSON")
 
