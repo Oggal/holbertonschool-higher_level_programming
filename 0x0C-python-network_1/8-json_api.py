@@ -6,7 +6,7 @@ import sys
 
 def JsonPost():
     """Sends a POST request"""
-    url = "http://6d4d1d93620d.ae068b5a.hbtn-cod.io:5000/search_user"
+    url = "http://0.0.0.0:5000/search_user"
     try:
         q = sys.argv[1]
     except Exception as e:
