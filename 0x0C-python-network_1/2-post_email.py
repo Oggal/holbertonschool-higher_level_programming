@@ -14,5 +14,6 @@ def postEmail(url, emailadrs):
     with urllib.request.urlopen(req) as response:
         print(response.read().decode('utf-8'))
 
+
 if __name__ == "__main__":
     postEmail(sys.argv[1], sys.argv[2])
