@@ -10,8 +10,9 @@ def GetGithubID(usr, pswd):
     r = requests.get(url, auth=(usr, pswd))
     try:
         print(r.json().get('id'))
-    except:
+    except Exception as e:
         print("None")
+
 
 if __name__ == "__main__":
     if (len(sys.argv) == 3):
