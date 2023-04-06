@@ -1,7 +1,7 @@
 #!/usr/bin/node
 // Task 2, arguments
 
-const { argv } = require('node:process');
+import {argv} from 'node:process';
 
 const argc = argv.length;
 const values = ['No argument', 'Argument found', 'Arguments found'];
