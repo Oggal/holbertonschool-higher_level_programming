@@ -7,3 +7,5 @@ class Rectangle {
     this.height = h;
   }
 }
+
+exports.Rectangle = Rectangle;
