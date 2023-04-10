@@ -3,6 +3,7 @@
 
 if (process.argv.length <= 3) {
   console.log(0);
+  process.exit();
 }
 
 const arr = process.argv.slice(2);
