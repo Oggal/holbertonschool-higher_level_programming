@@ -1,19 +1,20 @@
 #!/usr/bin/node
 // Task 11, second largest
 
-const x = process.argv[3];
-
-if (typeof x !== 'undefined') {
+if (process.argv.length <= 3) {
   console.log(0);
 }
 
-let max = 0;
-let betamax = max;
+const arr = process.argv.slice(2);
+let max = arr[0];
+let second = arr[0];
 
-for (const cur of process.argv.length) {
-  if (max < cur) {
-    betamax = max;
-    max = cur;
+for (let i = 0; i < arr.length; i++) {
+  const curr = parseInt(arr[i]);
+  if (curr > max) {
+    second = max;
+    max = curr;
   }
 }
-console.log(betamax);
+
+console.log(second);
