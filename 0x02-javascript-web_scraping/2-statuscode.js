@@ -10,5 +10,5 @@ request(myTargetURL, 'GET', function (error, response, body) {
     console.log('error:', error);
     return;
   }
-  console.log('code:', response && response.statusCode);
+  console.log('code:',response.statusCode);
 });
