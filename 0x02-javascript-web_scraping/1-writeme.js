@@ -1,13 +1,12 @@
 #!/usr/bin/node
-// Read a file
+// write to a file
 
 const fileReader = require('fs');
 const myTargetFile = process.argv[2];
+const myContent = process.argv[3];
 
-fileReader.readFile(myTargetFile, 'utf8', function (err, data) {
+fileReader.writeFile(myTargetFile, myContent, 'utf8', function (err) {
   if (err) {
     console.log(err);
-  } else {
-    console.log(data);
   }
 });
